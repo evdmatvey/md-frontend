@@ -1,0 +1,56 @@
+@import url(./fonts.css);
+
+:root {
+  --light-theme-background: #f6f6f6;
+  --dark-theme-background: #2b2931;
+  --light-theme-accent: #7f55d6;
+  --dark-theme-accent: #6e4bb5;
+  --light-theme-border: #cfcfcf;
+  --dark-theme-border: #747474;
+  --light-theme-text: #231e2d;
+  --dark-theme-text: #cfcfcf;
+
+  --color-orange: #fd7231;
+  --color-red: #f64c46;
+  --color-pink: #de68db;
+  --color-blue: #4b66e3;
+  --color-sky-blue: #39b3e3;
+  --color-green: #6eda44;
+  --color-yellow: #eea82f;
+  --color-white: #ffffff;
+  --color-black: #000000;
+  --color-gray: #9c9c9c;
+
+  --border-r-xs: 3px;
+  --border-r-s: 6px;
+  --border-r-m: 8px;
+  --border-r-lg: 12px;
+
+  --font-family: 'Nunito', sans-serif;
+  --font-family-mono: 'Roboto Mono', 'Consolas', 'Courier New', monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-family);
+  font-size: 16px;
+  font-weight: 400;
+  font-style: normal;
+  background: var(--background);
+  color: var(--text);
+}
+
+button,
+input {
+  font-family: var(--font-family);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
