@@ -1,10 +1,10 @@
 import { createBrowserRouter } from 'react-router';
-import { Home } from '@/pages/Home';
+import { HomePage } from '@/pages/home';
 import { ROUTES } from '@/shared/config/routes.config';
 
 export const router = createBrowserRouter([
   {
     path: ROUTES.HOME,
-    element: <Home />,
+    element: <HomePage />,
   },
 ]);
