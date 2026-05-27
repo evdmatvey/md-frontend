@@ -1,6 +1,7 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import { RouterProvider } from 'react-router';
-import { router } from './router';
+import { ThemeContextProvider } from '@/shared/providers/ThemeContextProvider';
+import { router } from './routes';
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -15,7 +16,9 @@ const queryClient = new QueryClient({
 export const Providers = () => {
   return (
     <QueryClientProvider client={queryClient}>
-      <RouterProvider router={router} />
+      <ThemeContextProvider>
+        <RouterProvider router={router} />
+      </ThemeContextProvider>
     </QueryClientProvider>
   );
 };

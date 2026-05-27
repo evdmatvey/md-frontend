@@ -1,0 +1,28 @@
+.root {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-weight: 700;
+  font-size: 20px;
+}
+
+.root svg {
+  height: 36px;
+  width: 36px;
+}
+
+[data-theme='light'] .root {
+  color: var(--light-theme-text);
+}
+
+[data-theme='light'] .root svg path {
+  fill: var(--light-theme-accent);
+}
+
+[data-theme='dark'] .root {
+  color: var(--dark-theme-text);
+}
+
+[data-theme='dark'] .root svg path {
+  fill: var(--dark-theme-accent);
+}

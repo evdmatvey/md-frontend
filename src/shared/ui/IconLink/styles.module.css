@@ -1,0 +1,49 @@
+.root {
+  width: 40px;
+  height: 40px;
+  padding: 8px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: border-color 0.15s linear;
+}
+
+.root svg {
+  width: 24px;
+  height: 24px;
+  transition: transform 0.1s linear;
+}
+
+[data-theme='light'] .root {
+  border-color: var(--light-theme-border);
+}
+
+[data-theme='light'] .root svg path {
+  fill: var(--light-theme-text);
+}
+
+[data-theme='dark'] .root {
+  border-color: var(--dark-theme-border);
+}
+
+[data-theme='dark'] .root svg path {
+  fill: var(--dark-theme-text);
+}
+
+@media (hover: hover) {
+  [data-theme='light'] .root:hover {
+    border-color: var(--light-theme-text);
+  }
+
+  [data-theme='dark'] .root:hover {
+    border-color: var(--dark-theme-text);
+  }
+
+  .root:hover svg {
+    transform: scale(1.05);
+  }
+}
