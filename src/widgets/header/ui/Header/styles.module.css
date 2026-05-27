@@ -1,0 +1,24 @@
+.root {
+  padding: 20px;
+  border-bottom: 1px solid transparent;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+[data-theme='light'] .root {
+  border-color: var(--light-theme-border);
+}
+
+[data-theme='dark'] .root {
+  border-color: var(--dark-theme-border);
+}
