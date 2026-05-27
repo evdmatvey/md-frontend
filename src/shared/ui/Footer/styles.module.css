@@ -1,0 +1,31 @@
+.root {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 5px;
+  border-top: 1px solid transparent;
+  font-size: 18px;
+}
+
+.root svg {
+  height: 24px;
+  width: 24px;
+}
+
+[data-theme='light'] .root {
+  border-color: var(--light-theme-border);
+}
+
+[data-theme='light'] .root svg path {
+  fill: var(--light-theme-accent);
+}
+
+[data-theme='dark'] .root {
+  border-color: var(--dark-theme-border);
+}
+
+[data-theme='dark'] .root svg path {
+  fill: var(--dark-theme-accent);
+}
