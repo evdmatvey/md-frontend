@@ -1,0 +1,52 @@
+.particles {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: -1;
+}
+
+.particle {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: var(--light-theme-accent);
+  border-radius: 50%;
+  animation: floatUp 16s linear infinite;
+  opacity: 0;
+}
+
+.particle:nth-child(odd) {
+  background: var(--color-orange);
+  animation-duration: 19s;
+  animation-delay: 4s;
+}
+
+.particle:nth-child(3n) {
+  background: var(--color-red);
+  animation-duration: 22s;
+  animation-delay: 8s;
+}
+
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) translateX(0) scale(0);
+    opacity: 0;
+  }
+  5% {
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(50vh) translateX(15px) scale(1.2);
+    opacity: 0.25;
+  }
+  95% {
+    opacity: 0.03;
+  }
+  100% {
+    transform: translateY(-10vh) translateX(-10px) scale(0);
+    opacity: 0;
+  }
+}

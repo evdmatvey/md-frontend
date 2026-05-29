@@ -1,0 +1,73 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  font-family: var(--font-family-mono);
+  overflow: hidden;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.button {
+  padding: 10px 24px;
+  border: 1px solid transparent;
+  border-radius: var(--border-r-m);
+  font-family: var(--font-family-mono);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  letter-spacing: 0.05em;
+  font-weight: 600;
+  font-size: 18px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button svg path {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.button:active {
+  transform: translateY(-1px);
+  transition: all 0.1s ease;
+}
+
+[data-theme='light'] .button {
+  border-color: var(--light-theme-border);
+  color: var(--light-theme-text);
+}
+
+[data-theme='light'] .button svg path {
+  fill: var(--light-theme-text);
+}
+
+[data-theme='dark'] .button {
+  border-color: var(--dark-theme-border);
+  color: var(--dark-theme-text);
+}
+
+[data-theme='dark'] .button svg path {
+  fill: var(--dark-theme-text);
+}
+
+@media (hover: hover) {
+  .button:hover {
+    color: var(--color-white);
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(127, 85, 214, 0.3);
+  }
+
+  .button:hover svg path {
+    fill: var(--color-white);
+  }
+
+  [data-theme='light'] .button:hover {
+    background: var(--light-theme-accent);
+    border-color: var(--light-theme-accent);
+  }
+
+  [data-theme='dark'] .button:hover {
+    background: var(--dark-theme-accent);
+    border-color: var(--dark-theme-accent);
+  }
+}
